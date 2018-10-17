@@ -1,0 +1,28 @@
+<!--miniprogram/pages/demo/demo.wxml-->
+
+<view class='container'>
+  <view class='guide'>
+    <text class="headline">数据查询</text>
+    <button size="mini" type="default" bindtap="queryCount">查询记录</button>
+  </view>
+
+  <view class='guide'>
+    <text class="headline">数据新增</text>
+    <button size="mini" type="default" bindtap="addCount">新建记录</button>
+  </view>
+
+  <view class='guide'>
+    <text class="headline">数据更新</text>
+    <button size="mini" type="default" bindtap="updateCount">更新记录</button>
+  </view>
+
+  <view class='guide'>
+    <text class="headline">数据删除</text>
+    <button size="mini" type="default" bindtap="deleteCount">删除记录</button>
+  </view>
+
+  <view class='guide'>
+    <text class="headline">上传图片</text>
+    <button size="mini" type="default" bindtap="uploadImg">上传图片</button>
+  </view>
+</view>
