@@ -25,4 +25,8 @@
     <text class="headline">上传图片</text>
     <button size="mini" type="default" bindtap="uploadImg">上传图片</button>
   </view>
+  <view class='guide'>
+    <text class="headline">测试函数</text>
+    <button size="mini" type="default" bindtap="testCall">测试函数</button>
+  </view>
 </view>

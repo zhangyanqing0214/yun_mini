@@ -135,7 +135,7 @@ Page({
             })
           },
           fail: e => {
-            console.error('文件上传失败',e)
+            console.error('文件上传失败', e)
             wx.showToast({
               title: '文件上传失败',
             })
@@ -146,10 +146,18 @@ Page({
         })
       }
     })
-
-
-
+  },
+  testCall: function() {
+    wx.cloud.callFunction({
+      name:'async',
+      data:{
+        a:6,
+        b:8
+      },
+      complete:res=>{
+        console.log('callFunction test result:',res)
+      }
+    })
   }
-
 
 })
