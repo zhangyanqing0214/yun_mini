@@ -27,6 +27,6 @@
   </view>
   <view class='guide'>
     <text class="headline">测试Function</text>
-    <button size="mini" type="default" bindtap="testCall">测试函数</button>
+    <button size="mini" type="default" bindtap="testCall">call function</button>
   </view>
 </view>
