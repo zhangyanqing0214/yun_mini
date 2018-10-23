@@ -3,11 +3,12 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
+    avatarUrl: '../res/user-unlogin.png',
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    showScope: false
   },
 
   onLoad: function() {
@@ -31,11 +32,14 @@ Page({
               })
             }
           })
+        } else {
+          this.setData({ showScope: true})
         }
       }
     })
   },
 
+  //点击用户头像的时候获取信息
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
       this.setData({
@@ -43,10 +47,14 @@ Page({
         avatarUrl: e.detail.userInfo.avatarUrl,
         userInfo: e.detail.userInfo
       })
+    } else {
+      console.info('授权拒绝')
     }
   },
 
+  //获取openiD
   onGetOpenid: function() {
+    debugger
     // 调用云函数
     wx.cloud.callFunction({
       name: 'login',
@@ -68,20 +76,20 @@ Page({
   },
 
   // 上传图片
-  doUpload: function () {
+  doUpload: function() {
     // 选择图片
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
-      success: function (res) {
+      success: function(res) {
 
         wx.showLoading({
           title: '上传中',
         })
 
         const filePath = res.tempFilePaths[0]
-        
+
         // 上传图片
         const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
         wx.cloud.uploadFile({
@@ -93,7 +101,7 @@ Page({
             app.globalData.fileID = res.fileID
             app.globalData.cloudPath = cloudPath
             app.globalData.imagePath = filePath
-            
+
             wx.navigateTo({
               url: '../storageConsole/storageConsole'
             })
@@ -115,6 +123,6 @@ Page({
         console.error(e)
       }
     })
-  },
+  }
 
 })

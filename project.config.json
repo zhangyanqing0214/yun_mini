@@ -6,11 +6,12 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
-	"appid": "wxb8ecce207d7411a2",
+	"appid": "",
 	"projectname": "yun_mini",
-	"libVersion": "2.3.0",
+	"libVersion": "2.2.4",
 	"condition": {
 		"search": {
 			"current": -1,

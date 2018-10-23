@@ -149,13 +149,13 @@ Page({
   },
   testCall: function() {
     wx.cloud.callFunction({
-      name:'async',
-      data:{
-        a:6,
-        b:8
+      name: 'async',
+      data: {
+        a: 6,
+        b: 8
       },
-      complete:res=>{
-        console.log('callFunction test result:',res)
+      complete: res => {
+        console.log('callFunction test result:', res)
       }
     })
   }

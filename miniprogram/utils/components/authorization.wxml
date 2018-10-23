@@ -1,0 +1,13 @@
+<view class='a-page'>
+  <view class='a-authorization-title'>
+    微信授权
+  </view>
+  <view class='a-authorization-body'>
+    <view class='a-authorization-body-text'>purcotton将申请获取</view>
+    <view class='a-authorization-body-text'>你的公开的信息 (昵称、头像等)</view>
+  </view>
+  <view class='a-authorization-btus'>
+    <view class='a-authorization-btus-close' bindtap='reject'>拒绝</view>
+    <button open-type="getUserInfo" bindgetuserinfo="confirm" style='color:#31a083;' plain="true" class='a-authorization-btus-OK'>确认授权</button>
+  </view>
+</view>

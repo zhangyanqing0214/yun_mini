@@ -10,9 +10,10 @@
  * 
  */
 exports.main = (event, context) => {
+  console.info("------event------")
   console.log(event)
+  console.info("------context------")
   console.log(context)
-
   // 可执行其他自定义逻辑
   // console.log 的内容可以在云开发云函数调用日志查看
 

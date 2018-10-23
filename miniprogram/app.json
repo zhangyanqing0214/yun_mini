@@ -16,5 +16,35 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#31A083",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/res/tab_index_2.png",
+        "selectedIconPath": "pages/res/tab_index_3.png"
+      },
+      {
+        "pagePath": "pages/databaseGuide/databaseGuide",
+        "text": "数据库",
+        "iconPath": "pages/res/tab_index_2.png",
+        "selectedIconPath": "pages/res/tab_index_3.png"
+      },
+      {
+        "pagePath": "pages/addFunction/addFunction",
+        "text": "云函数",
+        "iconPath": "pages/res/tab_index_2.png",
+        "selectedIconPath": "pages/res/tab_index_3.png"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "demo",
+        "iconPath": "pages/res/tab_index_2.png",
+        "selectedIconPath": "pages/res/tab_index_3.png"
+      }
+    ]
   }
 }
