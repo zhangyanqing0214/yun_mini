@@ -8,7 +8,7 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    showScope: false
+    showAuth: false
   },
 
   onLoad: function() {
@@ -33,7 +33,7 @@ Page({
             }
           })
         } else {
-          this.setData({ showScope: true})
+          this.setData({ showAuth: true})
         }
       }
     })

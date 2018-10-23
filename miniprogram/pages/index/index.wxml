@@ -13,7 +13,7 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
   </view>
-   <authorization wx:if="{{showScope}}"></authorization>
+   <authorization wx:if="{{showAuth}}"></authorization>
 
   <!-- 上传图片 -->
   <!-- <view class="uploader">

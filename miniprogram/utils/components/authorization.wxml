@@ -1,4 +1,4 @@
-<view wx:if="{{display}}" class='a-page'>
+<view hidden="{{display}}" class='a-page'>
   <view class='a-authorization-title'>
     微信授权
   </view>

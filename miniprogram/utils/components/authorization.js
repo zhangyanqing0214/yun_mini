@@ -16,7 +16,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    display: true
+    display: false
   },
 
   /**
@@ -26,13 +26,13 @@ Component({
     reject: function(res) {
       console.info('拒绝')
       this.setData({
-        display: false
+        display: true
       })
     },
     confirm: function(res) {
       console.info('授权确认' + res)
       this.setData({
-        display: false
+        display: true
       })
       wx.reLaunch({
         url: '../index/index',
